@@ -1,0 +1,59 @@
+<br>
+<h1>Learning Angular</h1>
+<br>
+<hr>
+<br>
+<h3>Angular Control Flow</h3>
+
+<label for="a"> Value of a: <input type="number" id="a" [(ngModel)]="a"></label><br><br>
+<label for="b"> Value of b: <input type="number" id="b" [(ngModel)]="b"></label><br><br>
+
+<p><b>Results:</b> @if(a > b){
+    <p>{{a}} is greater than {{b}}</p>
+} @else if (b > a){
+    {{a}} is less than {{b}}
+} @else {
+    {{a}} is equal to {{b}}
+}
+</p>
+<br>
+<br>
+<hr>
+<br>
+<p><b>List items:</b> @for (item of items; track item.name){
+   <li>{{item.name}}</li> 
+} @empty {
+    <li aria-hidden="true">There are no items</li>
+}
+</p>
+<br>
+<br>
+<hr>
+<br>
+<h1>Attribute Directives</h1>
+
+<h4>ngClass</h4>
+
+<div [ngClass]="{'active': isActive, 'inactive': !isActive}">
+    Show active when the button is clicked!
+</div>
+
+<button (click)="toggleActive()">@if(isActive){
+    Activate
+}@else {
+    Inactivate
+}</button>
+
+<h4>ngStyle</h4>
+<div [ngStyle]="{'background-color': bgColor, 'font-size': fSize, 'text-align': tAlign}">
+    Style will be updated by a button click
+</div>
+<br>
+
+<button (click)="updateStyle()">Style Update</button>
+
+<br>
+<h1>Structural Attribute</h1>
+<br>
+<hr>
+<br>
