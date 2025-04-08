@@ -29,6 +29,8 @@ export class HeaderComponent {
   tAlign = " "
   bgColor = "red";
 
+  isUpdated = false;
+
   updateStyle(){
     this.fSize = "120px";
     this.bgColor = "blue";
