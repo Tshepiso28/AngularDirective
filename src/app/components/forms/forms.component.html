@@ -9,15 +9,15 @@
         </div><br>
         <div class="form-group">
             <label for="lastname">Last Name: </label>
-            <input type="text" name="lastname"  placeholder="Please Enter Your Last Name" [(ngModel)]="userObj.lastName">
+            <input type="text" name="lastname"  placeholder="Please Enter Your Last Name" [(ngModel)]="userObj.lastName" required>
         </div><br>
         <div class="form-group">
             <label for="email">Email: </label>
-            <input type="email" name="email" placeholder="Please Enter Your Email" [(ngModel)]="userObj.email">
+            <input type="email" name="email" placeholder="Please Enter Your Email" [(ngModel)]="userObj.email" required>
         </div><br>
         <div class="form-group">
             <label for="password">Password: </label>
-            <input type="password" name="password" placeholder="Please Enter Password" [(ngModel)]="userObj.pass">
+            <input type="password" name="password" placeholder="Please Enter Password" [(ngModel)]="userObj.pass" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$">
         </div><br>
         <input type="submit" value="submit" [disabled]="!userForm.valid"> 
 
