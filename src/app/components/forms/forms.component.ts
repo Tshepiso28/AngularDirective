@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { User } from '../../interfaces/user';
 
@@ -12,4 +12,7 @@ import { User } from '../../interfaces/user';
 })
 export class FormsComponent {
 userObj :User = {};
+onSubmit(userForm:NgForm){
+  console.log(userForm.value)
+}
 }
